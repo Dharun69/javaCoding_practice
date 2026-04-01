@@ -12,7 +12,8 @@ public class NumberOfDigits {
 		while(given!=0) {
 			given = given/10;
 			digit++;
-		}System.out.println(digit);
+		}
+		System.out.println(digit);
 
 		
 }
