@@ -21,6 +21,16 @@ public class RemoveDuplicates {
         return result;
     }
 
+    public static void removeDup(int[] arr) {
+
+        Set<Integer> set = new LinkedHashSet<>();
+        for(int num : arr) {
+            set.add(num);
+        }
+        System.out.println("Using set " + set);
+    }
+
+
     public static void main(String[] args) {
         Integer[] originalArray = {1, 2, 3, 4, 4, 5, 6, 6};
 
@@ -31,5 +41,9 @@ public class RemoveDuplicates {
         // Approach 2
         List<Integer> uniqueArrayLoop = removeDuplicatesUsingLoop(originalArray);
         System.out.println("Unique array using loop: " + uniqueArrayLoop);
+
+        // Approach 3
+        int[] input = {1, 2, 3, 4, 4, 5, 6, 6};
+        removeDup(input);
     }
 }

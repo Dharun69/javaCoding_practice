@@ -1,6 +1,8 @@
 package problems.arrayprob.basic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class LeftRotateArray {
 
@@ -24,11 +26,29 @@ public class LeftRotateArray {
         return rotated;
     }
 
+    public static int[] rotateLeftBruteForce(int[] arr, int d) {
+        if (arr.length == 0) return arr;
+        d = d % arr.length;
+        int count = 0;
+        while(count < d) {
+            int firstElement = arr[0];
+            for (int i = 0; i < arr.length-1; i++) {
+                arr[i] = arr[i + 1];
+            }
+            arr[arr.length - 1] = firstElement;
+            count++;
+
+        }
+        return arr;
+    }
+
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
         int d = 2;
         System.out.println(Arrays.toString(rotateLeft(arr,d)));
+        System.out.println(Arrays.toString(rotateLeftBruteForce(arr,d)));
+
 
     }
 

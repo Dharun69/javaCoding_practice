@@ -1,4 +1,4 @@
-package problems.stringprob.basic;
+package problems.arrayprob.geeksforgeeks.interview;
 
 public class ManualSorting {
 

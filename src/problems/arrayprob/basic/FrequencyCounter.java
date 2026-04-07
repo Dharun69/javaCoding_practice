@@ -9,11 +9,12 @@ public class FrequencyCounter {
         Map<Integer, Integer> frequency = new HashMap<>();
 
         for (int num : arr) {
-            if (frequency.containsKey(num)) {
-                frequency.put(num, frequency.get(num) + 1);
-            } else {
-                frequency.put(num, 1);
-            }
+//            if (frequency.containsKey(num)) {
+//                frequency.put(num, frequency.get(num) + 1);
+//            } else {
+//                frequency.put(num, 1);
+//            }
+            frequency.put(num, frequency.getOrDefault(num, 0)+1);
         }
 
         return frequency;

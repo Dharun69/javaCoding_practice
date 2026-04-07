@@ -5,7 +5,6 @@ public class MinMaxFinder {
     public static void findElements(int[] arr) {
         int min = Integer.MAX_VALUE;
         int secondMin = Integer.MAX_VALUE;
-
         int max = Integer.MIN_VALUE;
         int secondMax = Integer.MIN_VALUE;
 
